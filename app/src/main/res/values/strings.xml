@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">whosedigits</string>
+    <string name="hint_bin_search">Введите первые 8 цифр карты</string>
+    <string name="title_bin_search">Поиск</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hint_search_bin">Введите первые 8 цифр карты</string>
 </resources>

@@ -2,7 +2,7 @@ package com.github.clockworkclyde.whosedigits.models.remote
 
 import com.google.gson.annotations.SerializedName
 
-data class CardDataCountryModel(
+data class BinDataCountryModel(
     @SerializedName("numeric") val numeric: String,
     @SerializedName("alpha2") val short: String,
     @SerializedName("name") val name: String,

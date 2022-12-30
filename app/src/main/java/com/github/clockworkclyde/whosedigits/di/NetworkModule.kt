@@ -8,6 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Qualifier
 import javax.inject.Singleton
+import javax.net.ssl.SSLSocketFactory
 
 @Module
 @InstallIn(SingletonComponent::class)

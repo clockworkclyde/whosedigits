@@ -25,7 +25,6 @@ object BinApiModule {
             httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
             addInterceptor(httpLoggingInterceptor)
         }
-
         readTimeout(REQUEST_TIMEOUT, TimeUnit.SECONDS)
         connectTimeout(REQUEST_TIMEOUT, TimeUnit.SECONDS)
     }
