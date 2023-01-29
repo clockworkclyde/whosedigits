@@ -16,42 +16,39 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SearchBinViewModel @Inject constructor(
-    private val searchBin: SearchDataWithBinUseCase
+   private val searchBin: SearchDataWithBinUseCase
 ) : BaseViewModel() {
 
-    private val _searchQuery = MutableStateFlow("")
-    private val _errorMessage = MutableSharedFlow<String>()
-    private val _isLoading = MutableStateFlow(false)
+   private val _searchQuery = MutableStateFlow("")
+   private val _errorMessage = MutableSharedFlow<String>()
+   private val _isLoading = MutableStateFlow(false)
 
-    val searchQuery = _searchQuery.asStateFlow()
-    val errorMessage = _errorMessage.asSharedFlow()
-    val isLoading = _isLoading.asStateFlow()
+   val searchQuery = _searchQuery.asStateFlow()
+   val errorMessage = _errorMessage.asSharedFlow()
+   val isLoading = _isLoading.asStateFlow()
 
-    fun updateQuery(query: String) {
-        _searchQuery.value = query
-    }
+   fun updateQuery(query: String) {
+      _searchQuery.value = query
+   }
 
-    @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
-    val searchResult: SharedFlow<BinData> by lazy {
-        _searchQuery
-            .debounce(SEARCH_BIN_DEBOUNCE)
-            .filter { it.trim().isNotEmpty() }
-            .flatMapLatest { bin ->
-                flow {
-                    searchBin(bin).let {
-                        Log.e("TAG", it.toString())
-                        when (it) {
-                            is Response.Failure -> _errorMessage.emit("Request error: ${it.exception}")
-                            is Response.Success -> emit(it.data)
-                        }
-                    }
-                }
+   @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
+   val searchResult: StateFlow<BinData?> by lazy {
+      _searchQuery
+         .debounce(SEARCH_BIN_DEBOUNCE)
+         .filter { it.trim().isNotEmpty() }
+         .flatMapLatest { bin ->
+            flow {
+               when (val response = searchBin(bin)) {
+                  is Response.Failure -> _errorMessage.emit("Request error: ${response.exception}")
+                  is Response.Success -> emit(response.data)
+               }
             }
-            .shareIn(
-                scope = viewModelScope,
-                started = SharingStarted.WhileSubscribed(WHILE_SUBSCRIBED_TIMEOUT),
-                replay = 1
-            )
-    }
+         }
+         .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(WHILE_SUBSCRIBED_TIMEOUT),
+            initialValue = null
+         )
+   }
 
 }
