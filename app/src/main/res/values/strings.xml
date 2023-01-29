@@ -7,4 +7,16 @@
     <string name="title_scheme">SCHEME/NETWORK</string>
     <string name="title_bank">Bank</string>
    <string name="button_show_bin_result_on_map">show on map</string>
+   <string name="bin_data_longitude">longitude</string>
+   <string name="bin_data_latitude">latitude</string>
+   <string name="bin_data_title_about_country">About country</string>
+   <string name="bin_data_card_type">cardType</string>
+   <string name="bin_data_prepaid">prepaid</string>
+   <string name="bin_data_luhn">luhn</string>
+   <string name="bin_data_scheme_or_network">scheme</string>
+   <string name="bin_data_length">length</string>
+   <string name="bin_data_title_about_card">About card</string>
+   <string name="bin_data_prepaid_positive">Yes</string>
+   <string name="bin_data_prepaid_negative">No</string>
+   <string name="bin_data_title_about_bank">About bank</string>
 </resources>
