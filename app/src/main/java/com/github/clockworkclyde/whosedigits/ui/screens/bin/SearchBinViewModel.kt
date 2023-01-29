@@ -51,4 +51,7 @@ class SearchBinViewModel @Inject constructor(
          )
    }
 
+   val searchQueries by lazy {
+
+   }
 }
