@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.github.clockworkclyde.whosedigits.R
 
@@ -28,7 +29,7 @@ fun AboutCardSectionCard(
          verticalArrangement = Arrangement.spacedBy(8.dp)
       ) {
          Text(
-            text = "About card",
+            text = stringResource(R.string.bin_data_title_about_card),
             style = MaterialTheme.typography.h6
          )
          Text(
@@ -39,7 +40,7 @@ fun AboutCardSectionCard(
             Column {
                Column {
                   Text(
-                     text = "length",
+                     text = stringResource(R.string.bin_data_length),
                      color = colorResource(R.color.label_grey),
                      style = MaterialTheme.typography.subtitle2
                   )
@@ -50,7 +51,7 @@ fun AboutCardSectionCard(
                }
                Column {
                   Text(
-                     text = "scheme",
+                     text = stringResource(R.string.bin_data_scheme_or_network),
                      color = colorResource(R.color.label_grey),
                      style = MaterialTheme.typography.subtitle2
                   )
@@ -64,7 +65,7 @@ fun AboutCardSectionCard(
             Column {
                Column {
                   Text(
-                     text = "luhn",
+                     text = stringResource(R.string.bin_data_luhn),
                      color = colorResource(R.color.label_grey),
                      style = MaterialTheme.typography.subtitle2
                   )
@@ -75,17 +76,17 @@ fun AboutCardSectionCard(
                }
                Column {
                   Text(
-                     text = "prepaid",
+                     text = stringResource(R.string.bin_data_prepaid),
                      color = colorResource(R.color.label_grey),
                      style = MaterialTheme.typography.subtitle2
                   )
                   when (isPrepaid) {
                      true -> Text(
-                        text = "Yes",
+                        text = stringResource(R.string.bin_data_prepaid_positive),
                         style = MaterialTheme.typography.subtitle1
                      )
                      false -> Text(
-                        text = "No",
+                        text = stringResource(R.string.bin_data_prepaid_negative),
                         style = MaterialTheme.typography.subtitle1
                      )
                   }
@@ -93,7 +94,7 @@ fun AboutCardSectionCard(
             }
             Column {
                Text(
-                  text = "cardType",
+                  text = stringResource(R.string.bin_data_card_type),
                   color = colorResource(R.color.label_grey),
                   style = MaterialTheme.typography.subtitle2
                )

@@ -10,7 +10,9 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.github.clockworkclyde.whosedigits.R
 
 @Composable
 fun AboutBankSectionCard(name: String, websiteLink: String, phone: String) {
@@ -22,7 +24,7 @@ fun AboutBankSectionCard(name: String, websiteLink: String, phone: String) {
          verticalArrangement = Arrangement.spacedBy(8.dp)
       ) {
          Text(
-            text = "About bank",
+            text = stringResource(R.string.bin_data_title_about_bank),
             style = MaterialTheme.typography.h6
          )
          Text(

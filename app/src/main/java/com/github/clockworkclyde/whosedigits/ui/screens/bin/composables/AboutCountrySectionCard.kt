@@ -30,7 +30,7 @@ fun AboutCountrySectionCard(alpha2: String, name: String, lat: Float, lng: Float
          verticalArrangement = Arrangement.spacedBy(8.dp)
       ) {
          Text(
-            text = "About country",
+            text = stringResource(R.string.bin_data_title_about_country),
             style = MaterialTheme.typography.h6
          )
          Text(
@@ -43,7 +43,7 @@ fun AboutCountrySectionCard(alpha2: String, name: String, lat: Float, lng: Float
          ) {
             Column {
                Text(
-                  text = "latitude",
+                  text = stringResource(R.string.bin_data_latitude),
                   color = colorResource(R.color.label_grey),
                   style = MaterialTheme.typography.subtitle2
                )
@@ -54,7 +54,7 @@ fun AboutCountrySectionCard(alpha2: String, name: String, lat: Float, lng: Float
             }
             Column {
                Text(
-                  text = "latitude",
+                  text = stringResource(R.string.bin_data_longitude),
                   color = colorResource(R.color.label_grey),
                   style = MaterialTheme.typography.subtitle2
                )
