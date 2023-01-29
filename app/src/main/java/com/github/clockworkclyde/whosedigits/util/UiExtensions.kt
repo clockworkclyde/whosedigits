@@ -1,5 +1,8 @@
-package com.github.clockworkclyde.whosedigits.ui.util
+package com.github.clockworkclyde.whosedigits.util
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.widget.SearchView
 
 inline fun SearchView.doOnQueryTextChanged(crossinline listener: (String) -> Unit) {
@@ -15,4 +18,9 @@ inline fun SearchView.doOnQueryTextChanged(crossinline listener: (String) -> Uni
             }
         }
     })
+}
+
+fun Context.goToMapActivityWithParams(lat: Float, lng: Float) {
+   val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:$lat,$lng"))
+   startActivity(intent)
 }

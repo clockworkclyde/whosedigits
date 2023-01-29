@@ -6,4 +6,5 @@
     <string name="title_country">COUNTRY</string>
     <string name="title_scheme">SCHEME/NETWORK</string>
     <string name="title_bank">Bank</string>
+   <string name="button_show_bin_result_on_map">show on map</string>
 </resources>
