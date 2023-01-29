@@ -7,7 +7,7 @@ import com.github.clockworkclyde.whosedigits.models.SEARCH_BIN_DEBOUNCE
 import com.github.clockworkclyde.whosedigits.models.WHILE_SUBSCRIBED_TIMEOUT
 import com.github.clockworkclyde.whosedigits.models.base.Response
 import com.github.clockworkclyde.whosedigits.models.ui.BinData
-import com.github.clockworkclyde.whosedigits.ui.screens.base.BaseViewModel
+import com.github.clockworkclyde.whosedigits.ui.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview

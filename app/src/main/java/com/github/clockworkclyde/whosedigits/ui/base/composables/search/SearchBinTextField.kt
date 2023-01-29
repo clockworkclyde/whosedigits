@@ -1,4 +1,4 @@
-package com.github.clockworkclyde.whosedigits.ui.composables.search
+package com.github.clockworkclyde.whosedigits.ui.base.composables.search
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
