@@ -23,7 +23,7 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.github.clockworkclyde.whosedigits.ui.composables.search.SearchHint
+import com.github.clockworkclyde.whosedigits.ui.base.composables.search.SearchHint
 import com.github.clockworkclyde.whosedigits.ui.screens.bin.SearchBinScreen
 import com.github.clockworkclyde.whosedigits.ui.screens.bin.SearchBinViewModel
 import com.github.clockworkclyde.whosedigits.ui.theme.WhosedigitsTheme
