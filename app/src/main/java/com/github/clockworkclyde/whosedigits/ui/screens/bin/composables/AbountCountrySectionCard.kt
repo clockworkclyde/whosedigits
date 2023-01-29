@@ -11,7 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import com.github.clockworkclyde.whosedigits.R
 import com.github.clockworkclyde.whosedigits.util.goToMapActivityWithParams
@@ -61,8 +64,14 @@ fun AboutCountrySectionCard(alpha2: String, name: String, lat: Float, lng: Float
                )
             }
             ClickableText(
-               style = MaterialTheme.typography.subtitle1,
-               text = AnnotatedString("(show on map)"),
+               style = MaterialTheme.typography.subtitle2,
+               text = AnnotatedString(
+                  stringResource(R.string.button_show_bin_result_on_map),
+                  spanStyle = SpanStyle(
+                     textDecoration = TextDecoration.Underline,
+                     color = colorResource(R.color.linkable_text)
+                  )
+               ),
                onClick = { context.goToMapActivityWithParams(lat = lat, lng = lng) }
             )
          }
