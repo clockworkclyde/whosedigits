@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">whosedigits</string>
-    <string name="hint_bin_search">Введите первые 8 цифр карты</string>
-    <string name="title_bin_search">Поиск</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="hint_search_bin">Введите первые 8 цифр карты</string>
+    <string name="hint_search_bin">Enter the first digits of a card number (BIN/IIN)</string>
+    <string name="title_card_number">CARD NUMBER</string>
+    <string name="title_country">COUNTRY</string>
+    <string name="title_scheme">SCHEME/NETWORK</string>
+    <string name="title_bank">Bank</string>
 </resources>
