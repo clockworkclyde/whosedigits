@@ -37,9 +37,19 @@ fun AboutCountrySectionCard(alpha2: String, name: String, lat: Float, lng: Float
             text = "$name, $alpha2",
             style = MaterialTheme.typography.h5
          )
+         ClickableText(
+            style = MaterialTheme.typography.subtitle2,
+            text = AnnotatedString(
+               stringResource(R.string.button_show_bin_result_on_map),
+               spanStyle = SpanStyle(
+                  textDecoration = TextDecoration.Underline,
+                  color = colorResource(R.color.linkable_text)
+               )
+            ),
+            onClick = { context.goToMapActivityWithParams(lat = lat, lng = lng) }
+         )
          Row(
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.Top
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
          ) {
             Column {
                Text(
@@ -63,17 +73,6 @@ fun AboutCountrySectionCard(alpha2: String, name: String, lat: Float, lng: Float
                   style = MaterialTheme.typography.subtitle1
                )
             }
-            ClickableText(
-               style = MaterialTheme.typography.subtitle2,
-               text = AnnotatedString(
-                  stringResource(R.string.button_show_bin_result_on_map),
-                  spanStyle = SpanStyle(
-                     textDecoration = TextDecoration.Underline,
-                     color = colorResource(R.color.linkable_text)
-                  )
-               ),
-               onClick = { context.goToMapActivityWithParams(lat = lat, lng = lng) }
-            )
          }
       }
    }
